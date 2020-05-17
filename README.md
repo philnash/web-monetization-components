@@ -1,10 +1,9 @@
 <div style="text-align:center" align="center">
-  <h1><code>&lt;💰&gt;</code></h1>
+  <p style="font-size:96px;"><code>&lt;💰&gt;</code></p>
+  <h1>Web Monetization Components</h1>
 
-  <h2>Web Monetization Components</h2>
+  <p><em>A collection of web components you can use on your web monetized websites.</em></p>
 </div>
-
-A collection of web components you can use on your web monetized websites.
 
 Currently available:
 
