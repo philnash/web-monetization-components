@@ -2,10 +2,24 @@
   "name": "web-monetization-ad-hider",
   "version": "1.0.0",
   "description": "A web component to hide ads when payment via the Web Monetization API is detected",
-  "main": "index.js",
+  "main": "dist/wm-ad-hider.cjs.js",
+  "browser": "dist/wm-ad-hider.umd.js",
+  "module": "dist/wm-ad-hider.es.js",
+  "unpkg": "dist/wm-ad-hider.min.js",
   "scripts": {
+    "build": "rollup -c && npm run minify",
+    "dev": "rollup -c -w",
+    "minify": "uglifyjs dist/wm-ad-hider.umd.js --compress --output dist/wm-ad-hider.min.js",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Phil Nash <philnash@gmail.com> (https://philna.sh)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "rollup": "^2.10.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "uglify-js": "^3.9.3"
+  }
 }
