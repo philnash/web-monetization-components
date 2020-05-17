@@ -1,16 +1,49 @@
 <div style="text-align:center" align="center">
-  <h1><code>&lt;wm-ad-hider&gt;</code></h1>
+  <h1>
+    <code>&lt;💰&gt;</code>
+    Web Monetization Components
+    <code>&lt;/💰&gt;</code>
+    <br><br>
+    <code>&lt;wm-ad-hider&gt;</code>
+  </h1>
+
+  <p><em>A web component that hides ads if it determines the user is sending payments via web monetization.</em></p>
 </div>
 
-A web component that hides ads if it determines the user is sending payments via web monetization.
 
-## How to use
+## Installation
 
-### Installation
+### npm
 
-... coming soon ...
+You can install with npm.
 
-### On the page
+```bash
+npm install web-monetization-ad-hider
+```
+
+Once installed, you can either use the minified version by referencing it from the `dist` directory.
+
+```html
+<script src="./node_modules/web-monetization-ad-hider/dist/wm-ad-hider.min.js"></script>
+```
+
+Or if you have a build step, you can require the module.
+
+```javascript
+const WebMonetizationAdHider = require('web-monetization-ad-hider');
+```
+
+### unpkg
+
+If you want to use the component from the unpkg CDN then you can.
+
+You can get the latest version using the bare URL. See more options on [https://unpkg.com/](https://unpkg.com/).
+
+```html
+<script src="https://unpkg.com/web-monetization-ad-hider"></script>
+```
+
+## Usage
 
 Wrap your ad code inside a `<template>` element then in the `<wm-ad-hider>` component.
 
@@ -26,7 +59,7 @@ The `<template>` makes the ad code inert (it doesn't render or fetch any linked 
 
 If the browser does support Web Monetization the `<wm-ad-hider>` will wait for 3 seconds and if no payment is detected the ads will be shown. If payment is detected before that time then no ads will be shown. If payment starts after that time, then ads will be removed from the page.
 
-#### Attributes
+### Attributes
 
 * `timeout`: The amount of time, in milliseconds the component will wait for monetization to start.
 

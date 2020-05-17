@@ -1,11 +1,26 @@
 {
   "name": "web-monetization-ad-hider",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A web component to hide ads when payment via the Web Monetization API is detected",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philnash/web-monetization-components.git"
+  },
+  "author": "Phil Nash <philnash@gmail.com> (https://philna.sh)",
+  "license": "MIT",
+  "keywords": [
+    "web monetization",
+    "web component"
+  ],
+  "homepage": "https://github.com/philnash/web-monetization-components/ad-hider",
+  "bugs": {
+    "url": "https://github.com/philnash/web-monetization-components/issues"
+  },
   "main": "dist/wm-ad-hider.cjs.js",
   "browser": "dist/wm-ad-hider.umd.js",
   "module": "dist/wm-ad-hider.es.js",
   "unpkg": "dist/wm-ad-hider.min.js",
+  "files": ["dist/*"],
   "scripts": {
     "build": "rollup -c && npm run minify",
     "dev": "rollup -c -w",
@@ -13,8 +28,6 @@
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Phil Nash <philnash@gmail.com> (https://philna.sh)",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
