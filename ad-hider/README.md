@@ -8,6 +8,8 @@
   </h1>
 
   <p><em>A web component that hides ads if it determines the user is sending payments via web monetization.</em></p>
+
+  <p><a href="https://badge.fury.io/js/web-monetization-ad-hider"><img src="https://badge.fury.io/js/web-monetization-ad-hider.svg" alt="npm version" height="18"></a></p>
 </div>
 
 
