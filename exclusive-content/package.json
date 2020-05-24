@@ -1,0 +1,33 @@
+{
+  "name": "web-monetization-exclusive-content",
+  "version": "0.1.0",
+  "description": "A web component to show exclusive content when payment via the Web Monetization API is detected",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philnash/web-monetization-components.git"
+  },
+  "author": "Phil Nash <philnash@gmail.com> (https://philna.sh)",
+  "homepage": "https://github.com/philnash/web-monetization-components/exclusive-content",
+  "bugs": {
+    "url": "https://github.com/philnash/web-monetization-components/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "web monetization",
+    "web component"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@rollup/plugin-babel": "^5.0.2",
+    "rollup": "^2.10.8",
+    "uglify-js": "^3.9.3"
+  }
+}

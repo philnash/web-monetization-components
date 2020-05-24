@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="monetization" content="$ilp.uphold.com/jWYNH2JiKFRB" />
+    <title>Web Monetization Exclusive Content Component</title>
+
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        color: #121212;
+        line-height: 1.4;
+      }
+
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      pre {
+        width: 100%;
+        overflow-x: scroll;
+      }
+
+      footer {
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      wm-ad-hider {
+        display: block;
+        height: 22.4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>The <code>&lt;wm-exclusive-content&gt;</code> component</h1>
+
+      <p>
+        The <code>&lt;wm-exclusive-content&gt;</code> is a web component that
+        you can use to show exclusive content if it determines the user is
+        sending payments via web monetization.
+      </p>
+
+      <p>
+        The component only activates if the Web Monetization API is available,
+        otherwise it will show nothing.
+      </p>
+
+      <p>The component has 1 attribute you can use:</p>
+
+      <dl>
+        <dt>
+          <code>template</code>
+        </dt>
+        <dd>
+          A CSS selector for a <code>&lt;template&gt;</code> element. The
+          component will find the template, hydrate it and use it as the
+          exclusive contents. This overrides nesting a template element within
+          the custom element.
+        </dd>
+      </dl>
+
+      <h2>Examples</h2>
+
+      <p>
+        If you are using a browser that supports the Web Monetization API then
+        you will see the text "Thank you for supporting this site with Web
+        Monetization" below once you start sending payments. If your browser
+        supports Web Monetization and you choose not to send a payment to the
+        page then the text will not appear. If your browser doesn't support Web
+        Monetization then you will not see the text at all.
+      </p>
+
+      <wm-exclusive-content>
+        <template>
+          <p>
+            <strong
+              >Thank you for supporting this site with Web Monetization</strong
+            >
+          </p>
+        </template>
+      </wm-exclusive-content>
+
+      <pre disabled><code>&lt;wm-exclusive-content&gt;
+  &lt;template&gt;
+    &lt;p&gt;&lt;strong&gt;Thank you for supporting this site with Web
+    Monetization&lt;/strong&gt;&lt;/p&gt;
+  &lt;/template&gt;
+&lt;/wm-exclusive-content&gt;</code></pre>
+    </main>
+
+    <footer>
+      <p>
+        Made by
+        <a href="https://philna.sh">Phil Nash</a>
+      </p>
+    </footer>
+
+    <script src="../dist/wm-exclusive-content.umd.js"></script>
+  </body>
+</html>
