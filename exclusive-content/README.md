@@ -31,7 +31,7 @@ Once installed, you can either use the minified version by referencing it from t
 Or if you have a build step, you can require the module.
 
 ```javascript
-const WebMonetizationAdHider = require("web-monetization-exclusive-content");
+const WebMonetizationExclusiveContent = require("web-monetization-exclusive-content");
 ```
 
 ### unpkg
@@ -56,33 +56,23 @@ Wrap your ad code inside a `<template>` element then in the `<wm-exclusive-conte
 
 The `<template>` makes the exclusive content inert (it doesn't render or fetch any linked resources). If the browser doesn't support web monetization (because `document.monetization` is not present) the exclusive content will not be rendered at all.
 
-If the browser does support Web Monetization the `<wm-exclusive-content>` will
+If the browser does support Web Monetization the `<wm-exclusive-content>` will not show anything.
 
 ### Attributes
 
-- `timeout`: The amount of time, in milliseconds the component will wait for monetization to start.
-
-  **Default**: 3000 (3 seconds)
-
-  Example:
-
-  ```html
-  <wm-ad-hider timeout="5000"><!-- Ad template --></wm-ad-hider>
-  ```
-
-- `ad-template`: A CSS selector that points to a `<template>` elsewhere on the page.
+- `template`: A CSS selector that points to a `<template>` elsewhere on the page.
 
   If your ad code lives elsewhere on the page, you can point to it with the `ad-template` attribute.
 
   Example:
 
   ```html
-  <wm-ad-hider ad-template="#ad-code"></wm-ad-hider>
+  <wm-exclusive-content template="#exclusive-content"></wm-exclusive-content>
 
   <!-- later down the page -->
 
-  <template id="ad-code">
-    <!-- ad template -->
+  <template id="exclusive-content">
+    <!-- exclusive content -->
   </template>
   ```
 
