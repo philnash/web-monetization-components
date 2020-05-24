@@ -1,6 +1,6 @@
 {
   "name": "web-monetization-ad-hider",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A web component to hide ads when payment via the Web Monetization API is detected",
   "repository": {
     "type": "git",
