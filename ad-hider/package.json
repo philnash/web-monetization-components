@@ -20,7 +20,9 @@
   "browser": "dist/wm-ad-hider.umd.js",
   "module": "dist/wm-ad-hider.es.js",
   "unpkg": "dist/wm-ad-hider.min.js",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "rollup -c && npm run minify",
     "dev": "rollup -c -w",
