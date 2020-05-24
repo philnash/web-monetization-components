@@ -18,10 +18,14 @@ class WebMonetizationAdHider extends HTMLElement {
     if (document.monetization && this.adCode) {
       this.hasPaid = document.monetization.state === "started";
       if (!this.hasPaid) {
-        document.monetization.addEventListener("monetizationstart", () => {
+        this.monetizationListener = () => {
           this.hasPaid = true;
           this.removeAds();
-        });
+        };
+        document.monetization.addEventListener(
+          "monetizationstart",
+          this.monetizationListener
+        );
         window.setTimeout(() => {
           if (!this.hasPaid) {
             this.showAds();
@@ -34,10 +38,10 @@ class WebMonetizationAdHider extends HTMLElement {
   }
 
   disconnectedCallback() {
-    if (document.monetization) {
+    if (document.monetization && this.monetizationListener) {
       document.monetization.removeEventListener(
         "monetizationstart",
-        this.removeAds.bind(this)
+        this.monetizationListener
       );
     }
   }
