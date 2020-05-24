@@ -2,18 +2,15 @@ class WebMonetizationAdHider extends HTMLElement {
   constructor() {
     super();
     this.hasPaid = false;
-    this.adCodeTemplateSelector = this.getAttributeOrFallback(
-      "ad-template",
-      null
-    );
+    this.templateSelector = this.getAttributeOrFallback("template", null);
     this.timeout = parseInt(this.getAttributeOrFallback("timeout", "3000"), 10);
   }
 
   connectedCallback() {
-    if (this.adCodeTemplateSelector === null) {
+    if (this.templateSelector === null) {
       this.adCode = this.querySelector("template");
     } else {
-      this.adCode = document.getElementById(this.adCodeTemplateSelector);
+      this.adCode = document.querySelector(this.templateSelector);
     }
     if (document.monetization && this.adCode) {
       this.hasPaid = document.monetization.state === "started";
